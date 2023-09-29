@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "dev": "nodemon --exec node node/node-server.js",
+        "start": "node node/node-server.js"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.1"
+    }
+  }
+  
