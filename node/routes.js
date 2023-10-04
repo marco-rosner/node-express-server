@@ -23,7 +23,7 @@ const routes = (req, res) => {
             break
         case "contagem-pessoas":
             // GET /contagem-pessoas
-            countPeople(req, res)
+            countPeople(res)
             break
         default:
             res.writeHead(400, "Bad Request");
