@@ -45,6 +45,21 @@ Make sure that you have [docker](https://docs.docker.com/get-docker/) and [docke
 docker-compose -f docker-compose-<node|express>-mongo.yml up --remove-orphans
 ```
 
+## Run benchmark
+
+I am using Gatling to run the benchmark and to install it go to benchmark folder and run the `install-gatling` script. After that, move the `BenchmarkSimulation.scala` file to `deps/gatling/user-files/simulations` and the resources `pessoas-payloads.tsv` and `termos-busca.tsv` to `deps/gatling/user-files/recources`.
+
+Go to the command line and run:
+
+```sh
+sh deps/gatling/bin/gatling.sh
+```
+
 ## Last results
 
-_TODO_
+![ExpressJS](./benchmark/resources/express-mongo.png?raw=true "ExpressJS server")
+ExpressJS  
+![Fiber](./benchmark/resources/fiber-go-mongo.png?raw=true "Fiber server")
+Fiber  
+![NodeJS](./benchmark/resources/node-server-mongo.png?raw=true "NodeJS server")
+NodeJS  
