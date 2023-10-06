@@ -4,9 +4,9 @@ const mongoose = require('mongoose'); // singleton
 const Person = require('../models/person')
 
 const people = [
-    { ID: "1", Name: "Marco Rosner", Nickname: "Rosner", Birth: "2000-10-01" },
-    { ID: "2", Name: "João Rosner", Nickname: "João", Birth: "2000-10-02" },
-    { ID: "3", Name: "Maria", Nickname: "Maria", Birth: "2000-10-03" },
+    { id: "1", name: "Marco Rosner", nickname: "Rosner", birth: "2000-10-01" },
+    { id: "2", name: "João Rosner", nickname: "João", birth: "2000-10-02" },
+    { id: "3", name: "Maria", nickname: "Maria", birth: "2000-10-03" },
 ]
 
 const newMongoDB = async () => {
@@ -24,8 +24,8 @@ const newMongoDB = async () => {
 
     // create indexes compound for full text search
     await mongoose.connection.db.collection('people').createIndex({
-        Name: "text",
-        Nickname: "text"
+        name: "text",
+        nickname: "text"
     }, { default_language: 'portuguese' })
 
     // load default data

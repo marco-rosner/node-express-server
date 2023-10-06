@@ -4,7 +4,7 @@ const searchPerson = (req, res) => {
     const url = new URL(req.url, "http://localhost:8080")
     const term = url.searchParams.get("t")
 
-    if(term == "") {
+    if(term == "" || url.searchParams.size === 0) {
         res.writeHead(400) // Bad Request
         res.end()
         return
