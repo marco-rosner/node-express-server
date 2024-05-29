@@ -8,7 +8,7 @@ const { countPeople } = require('./person/handler_count');
 
 const PORT = 8080
 
-const bootstrap = async () => {
+const bootstrap = () => {
     newMongoDB() // Creating Database
 
     const app = express();
